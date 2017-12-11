@@ -10,6 +10,10 @@ import { Component } from '@angular/core';
 	  <ul>
 	  	<li *ngFor="let arr of myArr">{{ arr }}</li>
 	  </ul>
+
+	  <div *ngIf="myVariable; then tmpl1 else tmpl2"></div>
+	  <ng-template #tmpl1> Yes, I exist!</ng-template>
+	  <ng-template #tmpl2> No, I do not exist!</ng-template>
   `,
   styleUrls: ['./app.component.css']
 })
@@ -25,4 +29,5 @@ export class AppComponent {
   }
 
   myArr = ['him', 'hers', 'yours'];
+  myVariable = 'something';
 }

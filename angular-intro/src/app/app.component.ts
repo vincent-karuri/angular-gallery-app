@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service'
 
 @Component({
   selector: 'app-root',
   template: `
 
-  	<h1 [ngStyle]="titleStyles">Hello!</h1>
-	  
-  `,
-  styles: [`
-
-  	h1 {
-  		text-decoration: underline;
-  	}
-
-  `]
+  	<p>{{ someProperty }}</p>
+  	
+  `
 })
 
 export class AppComponent {
+	constructor(private dataService:DataService) {
 
-	titleStyles = {
-		'color': 'red';
-		'font-size': '4em'
-	};
+	}
+
+	someProperty:string = '';
+
+	ngOnInit() {
+		console.log(this.dataService.cars);
+		this.someProperty = this.dataService.myData();
+	}
 
 }

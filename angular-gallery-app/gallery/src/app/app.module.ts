@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ImageService } from './image/shared/image.service';
+
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     BrowserModule,
     AlertModule.forRoot(),
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

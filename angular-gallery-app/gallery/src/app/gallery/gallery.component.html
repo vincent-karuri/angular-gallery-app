@@ -1,7 +1,15 @@
 <h2>{{ title }}</h2>
 <div class="row">
+	<button class="btn btn-lg btn-info" [class.active] ="filterBy=='all'" (click)="filterBy='all'">All</button>
+	<button class="btn btn-lg btn-info" [class.active] ="filterBy=='city'" (click)="filterBy='city'">Cities</button>
+	<button class="btn btn-lg btn-info"  [class.active] ="filterBy=='flower'" (click)="filterBy='flower'">Flowers</button>
+	<button class="btn btn-lg btn-info" [class.active] ="filterBy=='car'" (click)="filterBy='car'">Cars</button>
+	<button class="btn btn-lg btn-info"  [class.active] ="filterBy=='bridges'" (click)="filterBy='bridges'">Bridges</button>
+	<button class="btn btn-lg btn-info"  [class.active] ="filterBy=='mountain'" (click)="filterBy='mountain'">Mountains</button>
+	<button class="btn btn-lg btn-info"  [class.active] ="filterBy=='animals'" (click)="filterBy='animals'">Animals</button>
+
 	<ul id="thumbnailsList">
-		<li *ngFor="let image of visibleImages">
+		<li *ngFor="let image of (visibleImages | imageFilter:filterBy)">
 			<img src="{{image.url}}" class="tn" width="300" height="220">
 		</li>
 	</ul>

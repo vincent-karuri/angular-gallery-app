@@ -10,5 +10,5 @@ export class ImageFilterPipe implements PipeTransform {
 				return item.category === criteria;
 			});
 		}
-	});
+	};
 }

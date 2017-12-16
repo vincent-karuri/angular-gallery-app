@@ -14,7 +14,7 @@ export class ImageDetailComponent implements OnInit {
 
 	ngOnInit() {
 		this.image = this.imageService.getImage(
-			 +this.route.snapshot.params['id'];
+			 +this.route.snapshot.params['id']
 		 );
 	}
 }

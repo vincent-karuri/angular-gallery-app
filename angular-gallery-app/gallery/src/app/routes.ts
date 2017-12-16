@@ -5,7 +5,7 @@ import { ImageDetailComponent } from "./image/image-detail.component"
 
 
 export const appRoutes:Routes = [
-	{ path: "gallery", component: GalleryComponent }
-	{ path: "image/:id", component: ImageDetailComponent }
+	{ path: "gallery", component: GalleryComponent },
+	{ path: "image/:id", component: ImageDetailComponent },
 	{ path: "", redirectTo: "/gallery", pathMatch: 'full'}
-]
+];

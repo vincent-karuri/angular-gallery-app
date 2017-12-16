@@ -1,6 +1,10 @@
 # Gallery
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
+I. This repository contains a gallery app created using AngularJS. 
+
+II. Special thanks to Wes Doyle, 'Angular 4 Tutorial - Photo Gallery App" (https://www.youtube.com/watch?v=V5-CIZTLyvw), for the tutorial to follow along with.
+
+III. The app is live at : https://stark-escarpment-72668.herokuapp.com/gallery
 
 ## Development server
 
